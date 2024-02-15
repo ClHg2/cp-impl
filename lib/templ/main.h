@@ -29,7 +29,7 @@ using vpi = vec<pi>;
 
 #define il inline
 ttt > il int sz(const T& x) { return x.size(); }
-ttt > il bool cmin(T& x, const T& y) { return x > y ? x = y, true : false; }
-ttt > il bool cmax(T& x, const T& y) { return x < y ? x = y, true : false; }
+ttt > il bool ckmin(T& x, const T& y) { return x > y ? x = y, true : false; }
+ttt > il bool ckmax(T& x, const T& y) { return x < y ? x = y, true : false; }
 
 #endif
