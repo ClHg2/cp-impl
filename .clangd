@@ -10,7 +10,6 @@ Diagnostics:
     - performance-*
     Remove:
     - bugprone-easily-swappable-parameters
-    - modernize-use-default-member-init
     - modernize-use-trailing-return-type
   Suppress:
   - c++17-extensions
