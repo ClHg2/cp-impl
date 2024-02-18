@@ -24,6 +24,7 @@ using vi = vec<int>;
 using vb = vec<bool>;
 using vl = vec<ll>;
 using vpi = vec<pi>;
+#define rsz resize
 #define pb push_back
 #define eb emplace_back
 
