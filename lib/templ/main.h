@@ -4,6 +4,7 @@
 #include <bits/stdc++.h>
 
 #define all(x) begin(x), end(x)
+#define dbg(x) #x " = " << (x)
 #define each(i, x) for (auto& i : x)
 
 using namespace std;
