@@ -5,7 +5,6 @@
 
 il int p2(int k) { return 1 << k; }
 il int msk2(int k) { return p2(k) - 1; }
-
 il int pct(int n) { return __builtin_popcount(n); }
 il int pct(ll n) { return __builtin_popcountll(n); }
 il int pct2(int n) { return __builtin_parity(n); }
