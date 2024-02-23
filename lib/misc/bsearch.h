@@ -3,24 +3,24 @@
 
 #include "templ/main.h"
 
-ttt > il T safe_mid(T lo, T hi) { return (lo & hi) + ((lo ^ hi) >> 1); }
+ttt > il T safe_mid(T l, T r) { return (l & r) + ((l ^ r) >> 1); }
 
-ttt, typename F > T find_fst(T lo, T hi, F f) {
-  if (lo > hi || !f(hi)) return hi + 1;
-  while (lo < hi) {
-    T mid = safe_mid(lo, hi);
-    f(mid) ? hi = mid : lo = mid + 1;
+ttt, typename F > T find_fst(T l, T r, F f) {
+  if (l > r || !f(r)) return r + 1;
+  while (l < r) {
+    T mid = safe_mid(l, r);
+    f(mid) ? r = mid : l = mid + 1;
   }
-  return lo;
+  return l;
 }
 
-ttt, typename F > T find_lst(T lo, T hi, F f) {
-  if (lo > hi || !f(lo)) return lo - 1;
-  while (lo < hi) {
-    T mid = safe_mid(lo, hi + 1);
-    f(mid) ? lo = mid : hi = mid - 1;
+ttt, typename F > T find_lst(T l, T r, F f) {
+  if (l > r || !f(l)) return l - 1;
+  while (l < r) {
+    T mid = safe_mid(l, r + 1);
+    f(mid) ? l = mid : r = mid - 1;
   }
-  return lo;
+  return l;
 }
 
 #endif

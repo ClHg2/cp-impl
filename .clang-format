@@ -1,4 +1,3 @@
 BasedOnStyle: Google
-ForEachMacros:
-- 'each'
+ForEachMacros: ['FOR', 'F0R', 'ROF', 'R0F', 'rep', 'each']
 PackConstructorInitializers: BinPack
