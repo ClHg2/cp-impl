@@ -17,13 +17,12 @@ struct Dinic {
   vec<E> e;
 
   Dinic(int n_, int s_, int t_) : n{n_}, s{s_}, t{t_}, lv(n), adj(n), cur(n) {}
-  Dinic(int n_) : Dinic(n_ + 2, n_, n_ + 1) {}
+  explicit Dinic(int n_) : Dinic(n_ + 2, n_, n_ + 1) {}
 
   void link(int u, int v, F c, bool dir = true) {
     adj[u].pb(m++), e.pb({v, c});
     adj[v].pb(m++), e.pb({u, dir ? 0 : c});
   }
-
   bool bfs() {
     fill(all(lv), 0), lv[s] = 1;
     queue<int> q{{s}};
@@ -37,7 +36,6 @@ struct Dinic {
     }
     return lv[t];
   }
-
   F dfs(int u, F f) {
     if (u == t) return f;
     F o = f;
@@ -55,7 +53,6 @@ struct Dinic {
     }
     return o - f;
   }
-
   F flow() {
     F f = 0;
     while (bfs()) {

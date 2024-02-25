@@ -4,7 +4,6 @@
 #include "templ/main.h"
 
 ttt > il T safe_mid(T l, T r) { return (l & r) + ((l ^ r) >> 1); }
-
 ttt, typename F > T find_fst(T l, T r, F f) {
   if (l > r || !f(r)) return r + 1;
   while (l < r) {
@@ -13,7 +12,6 @@ ttt, typename F > T find_fst(T l, T r, F f) {
   }
   return l;
 }
-
 ttt, typename F > T find_lst(T l, T r, F f) {
   if (l > r || !f(l)) return l - 1;
   while (l < r) {
