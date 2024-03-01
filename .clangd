@@ -11,6 +11,8 @@ Diagnostics:
     Remove:
     - bugprone-easily-swappable-parameters
     - modernize-use-trailing-return-type
+    CheckOptions:
+      bugprone-narrowing-conversions.IgnoreConversionFromTypes: 'ptrdiff_t;difference_type'
   Suppress:
   - c++17-extensions
   - unqualified-std-cast-call
