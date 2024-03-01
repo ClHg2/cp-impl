@@ -56,7 +56,7 @@ struct Dinic {
   F flow() {
     F f = 0;
     while (bfs()) {
-      F0R (i, n) cur[i] = begin(adj[i]);
+      F0R (i, n) cur[i] = bg(adj[i]);
       f += dfs(s, numeric_limits<F>::max());
     }
     return f;
