@@ -36,6 +36,8 @@ using vpi = vec<pi>;
 #define rsz resize
 #define pb push_back
 #define eb emplace_back
+#define ft front()
+#define bk back()
 
 #define il inline
 #define lb lower_bound
