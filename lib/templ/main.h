@@ -32,7 +32,6 @@ using vpi = vec<pi>;
 #define sz(x) int((x).size())
 #define bg begin
 #define all(x) bg(x), end(x)
-#define sor(x) sort(all(x))
 #define rsz resize
 #define pb push_back
 #define eb emplace_back
@@ -44,6 +43,9 @@ using vpi = vec<pi>;
 #define ub upper_bound
 ttt > il int lwb(const vec<T>& a, const T& v) { return lb(all(a), v) - bg(a); }
 ttt > il int upb(const vec<T>& a, const T& v) { return ub(all(a), v) - bg(a); }
+
+ttt > using pq = priority_queue<T>;
+ttt > using pqg = priority_queue<T, vec<T>, greater<T>>;
 
 ttt > il bool ckmin(T& x, const T& y) { return y < x ? x = y, true : false; }
 ttt > il bool ckmax(T& x, const T& y) { return x < y ? x = y, true : false; }
