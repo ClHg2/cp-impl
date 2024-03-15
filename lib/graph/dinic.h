@@ -12,9 +12,9 @@ struct Dinic {
 
   int n, m = 0, s, t;
   vi lv;
-  vec<vi> adj;
-  vec<vi::iterator> cur;
-  vec<Edge> e;
+  V<vi> adj;
+  V<vi::iterator> cur;
+  V<Edge> e;
 
   Dinic(int n_, int s_, int t_) : n{n_}, s{s_}, t{t_}, lv(n), adj(n), cur(n) {}
   explicit Dinic(int n_) : Dinic(n_ + 2, n_, n_ + 1) {}

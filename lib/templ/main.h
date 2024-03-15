@@ -22,12 +22,12 @@ using pi = pair<int, int>;
 #define s second
 
 #define ttt template <typename T
-ttt > using vec = vector<T>;
-ttt, size_t n > using arr = array<T, n>;
-using vi = vec<int>;
-using vb = vec<bool>;
-using vl = vec<ll>;
-using vpi = vec<pi>;
+ttt > using V = vector<T>;
+ttt, size_t n > using A = array<T, n>;
+using vi = V<int>;
+using vb = V<bool>;
+using vl = V<ll>;
+using vpi = V<pi>;
 
 #define sz(x) int((x).size())
 #define bg begin
@@ -41,11 +41,11 @@ using vpi = vec<pi>;
 #define il inline
 #define lb lower_bound
 #define ub upper_bound
-ttt > il int lwb(const vec<T>& a, const T& v) { return lb(all(a), v) - bg(a); }
-ttt > il int upb(const vec<T>& a, const T& v) { return ub(all(a), v) - bg(a); }
+ttt > il int lwb(const V<T>& a, const T& v) { return lb(all(a), v) - bg(a); }
+ttt > il int upb(const V<T>& a, const T& v) { return ub(all(a), v) - bg(a); }
 
 ttt > using pq = priority_queue<T>;
-ttt > using pqg = priority_queue<T, vec<T>, greater<T>>;
+ttt > using pqg = priority_queue<T, V<T>, greater<T>>;
 
 ttt > il bool ckmin(T& x, const T& y) { return y < x ? x = y, true : false; }
 ttt > il bool ckmax(T& x, const T& y) { return x < y ? x = y, true : false; }

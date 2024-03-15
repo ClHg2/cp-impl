@@ -14,10 +14,10 @@ struct Mcmf {
 
   int n, m = 0, s, t;
   vi pre;
-  vec<vi> adj;
+  V<vi> adj;
   vb vis;
-  vec<Cost> dis, p;
-  vec<Edge> e;
+  V<Cost> dis, p;
+  V<Edge> e;
 
   Mcmf(int n_, int s_, int t_)
       : n{n_}, s{s_}, t{t_}, pre(n), adj(n), vis(n), dis(n), p(n) {}
