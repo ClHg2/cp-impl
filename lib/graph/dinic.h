@@ -41,14 +41,13 @@ struct Dinic {
     Flow o = f;
     for (; cur[u] < end(adj[u]); ++cur[u]) {
       int i = *cur[u], v = e[i].v;
-      if (lv[v] == lv[u] + 1 && e[i].c) {
-        Flow d = dfs(v, min(f, e[i].c));
-        if (!d)
-          lv[v] = 0;
-        else {
-          f -= d, e[i].c -= d, e[i ^ 1].c += d;
-          if (!f) break;
-        }
+      if (lv[v] != lv[u] + 1 || !e[i].c) continue;
+      Flow d = dfs(v, min(f, e[i].c));
+      if (!d)
+        lv[v] = 0;
+      else {
+        f -= d, e[i].c -= d, e[i ^ 1].c += d;
+        if (!f) break;
       }
     }
     return o - f;
